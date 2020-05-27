@@ -1,0 +1,79 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "resourceName": {
+            "value": "aks-cluster-name"
+        },
+        "nodeRG" : {
+            "value": "aks-cluster-nodes-rg"
+        },
+        "location": {
+            "value": "eastus2"
+        },
+        "dnsPrefix": {
+            "value": "aks-cluster-name-dns-prefix"
+        },
+        "existingVirtualNetworkResourceGroup" : {
+            "value": "existing-network-rg"
+        },
+        "existingSubnetName" : {
+            "value" : "existing-subnet-name"
+        },
+        "existingVirtualNetworkName" : {
+            "value" : "existing-VNET-name"
+        },
+        "agentCount": {
+            "value": 1
+        },
+        "agentVMSize": {
+            "value": "Standard_DS3_v2"
+        },
+        "kubernetesVersion": {
+            "value": "1.16.7"
+        },
+        "networkPlugin": {
+            "value": "azure"
+        },
+        "enableRBAC": {
+            "value": true
+        },
+        "enableHttpApplicationRouting": {
+            "value": false
+        },
+        "vmssNodePool": {
+            "value": true
+        },
+        "serviceCidr": {
+            "value": "10.210.0.0/16 - can be changed"
+        },
+        "dnsServiceIP": {
+            "value": "10.210.0.10 - can be changed"
+        },
+        "minCount" : {
+            "value" : 1
+        },
+        "maxCount" : {
+            "value" : 100
+        },
+        "ScaleSetPriority": {
+            "value": "Spot"
+        },
+        "dockerBridgeCidr": {
+            "value": "172.17.0.1/16 - can be changed"
+        },
+        "tenantID" : {
+            "value": "your-tenant-id"
+        },
+        "adminGroupObjectID": {
+            "value": "AAD Admin group id for AKS cluster mgmt"
+        },
+        "linuxAdminUsername" : {
+            "value": "azureuser"
+        },
+        "sshRSAPublicKey" : {
+            "value": "your ssh key"
+        }
+        
+    }
+}
